@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.12
+    commands:
+      - npm install -g serverless
+  build:
+    commands:
+      - echo "Starting Serverless Deployment"
+      - serverless deploy --region ${AWS_REGION} --verbose --conceal
+      - echo "Serverless Deployment Completed"
