@@ -9,5 +9,5 @@ phases:
   build:
     commands:
       - echo "Starting Serverless Deployment"
-      - serverless deploy --region ${AWS_REGION} --verbose --conceal
+      - serverless deploy --region ${AWS_REGION}
       - echo "Serverless Deployment Completed"
